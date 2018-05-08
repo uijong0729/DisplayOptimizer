@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.euj.scit.newproject">
+
+    <uses-sdk android:minSdkVersion="6" />
+
+    <!-- 화면모드 권한 -->
+    <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
+    <!-- 밝기 접근 권한 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 화면 오버레이 권한 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 저장장치 접근권한 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/eye"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/eye"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        <!-- 화면모드 권한 -->
+        <service
+            android:name=".ScreenFilterService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name=".ScreenFilterService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PostActivity"
+            android:label="PostActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".TextActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HelperActivity" />
+
+        <service
+            android:name=".PictureService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".PictureService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tniservice"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".tniservice" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

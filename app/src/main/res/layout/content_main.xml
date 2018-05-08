@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.euj.scit.newproject.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="필터 끄기"
+            android:id="@+id/stop"
+            android:onClick="clickMode"
+            />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="테마 끄기"
+                android:visibility="invisible"
+                android:id="@+id/themCancle"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메모 끄기"
+                android:visibility="invisible"
+                android:id="@+id/memoCancle"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#449911"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow>
+
+                    <TextView
+                        android:text="필터 강도"
+                        android:gravity="center"
+                        android:textSize="30dp"
+                        android:layout_column="1"
+                        />
+
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/movie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickMode"
+                        android:drawableBottom="@drawable/stage1"
+                        android:text="약"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/outsideN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickMode"
+                        android:drawableBottom="@drawable/stage2"
+                        android:text="중"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickMode"
+                        android:drawableBottom="@drawable/stage3"
+                        android:text="강"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                         />
+
+                    <TextView
+                        android:id="@+id/outsideA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickMode"
+                        android:drawableBottom="@drawable/stage4"
+                        android:text="극강"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#449911"/>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:text="고급 설정"
+                        android:gravity="center"
+                        android:textSize="30dp"
+                        android:layout_column="1"/>
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="20sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="밝기"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        />
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/bright"
+                        android:max="200"
+                        android:progress="0"
+                        android:layout_weight="95"
+                        />
+
+                </TableRow>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible"
+                    android:id="@+id/themSeek">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="테마 불투명도"
+                    android:textSize="25dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    />
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/them"
+                    android:max="200"
+                    android:progress="30"
+                    android:layout_weight="2000"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible"
+                    android:id="@+id/textSeek">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="글자 크기"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        />
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textSize"
+                        android:max="40"
+                        android:min="10"
+                        android:progress="10"
+                        android:layout_weight="200"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible"
+                    android:id="@+id/imgSeek">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="테마 크기"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        />
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imgSize"
+                        android:max="10"
+                        android:progress="0"
+                        android:min="0"
+                        android:layout_weight="200"
+                        />
+                </LinearLayout>
+
+
+
+            </TableLayout>
+
+      </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

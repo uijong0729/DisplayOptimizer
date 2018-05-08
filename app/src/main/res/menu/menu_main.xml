@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.euj.scit.newproject.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_imageSetting"
+        android:orderInCategory="102"
+        android:title="도움말"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_textSetting"
+        android:orderInCategory="101"
+        android:title="메모 추가"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_sendEmail"
+        android:orderInCategory="111"
+        android:title="개발자 문의"
+        app:showAsAction="never"/>
+</menu>
